@@ -4,7 +4,6 @@ import ModeToggle from '@/components/shared/mode-toggle'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-// import GlobalSearch from './global-search'
 import { navLinks } from '@/constants'
 import Mobile from './mobile'
 import { useMyContext } from '@/app/userContext'
@@ -52,22 +51,8 @@ function Navbar() {
 					<Link className='hover:bg-blue-400/20 py-1 px-3 cursor-pointer rounded-sm transition-colors' href={user ? '/myproducts':'/register'}>My Products</Link>
 					<Link className='hover:bg-blue-400/20 py-1 px-3 cursor-pointer rounded-sm transition-colors'href={user ? '/favourites':'/register'}>My Favourites</Link>
 					<Link className='hover:bg-blue-400/20 py-1 px-3 cursor-pointer rounded-sm transition-colors' href={'/contact'}>Contact</Link>
-					{/* {navLinks.map(nav => (
-						<Link
-							key={nav.route}
-							href={nav.route}
-							className={cn(
-								'hover:bg-blue-400/20 py-1 px-3 cursor-pointer rounded-sm transition-colors',
-								pathname === nav.route && 'text-blue-400'
-							)}
-						>
-							{nav.name}
-						</Link>
-					))} */}
 				</div>
-				{/* Search */}
 				<div className='flex items-center gap-1'>
-					{/* <GlobalSearch /> */}
 					{user!=null ? (
 						<div className='flex justify-center items-center gap-1'>
 							<DropdownMenu>
